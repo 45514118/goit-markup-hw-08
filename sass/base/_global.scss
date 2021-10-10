@@ -1,0 +1,38 @@
+body {
+  font-family: $body-font;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var($primary-text-color);
+  background-color: var($primary-bg-color);
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+img {
+  display: block;
+}
+input,
+textarea {
+  outline: none;
+}

@@ -1,0 +1,28 @@
+.about-us__item {
+  margin-right: 30px;
+  width: 270px;
+  &__item:last-child {
+    margin-right: 0;
+  }
+}
+.about-us__group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  background-color: $tertiary-bg-color;
+  margin-bottom: 30px;
+}
+.about-us__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.about-us__description {
+  font-size: 14px;
+  line-height: 1.71;
+  color: &secondary-text-color;
+}
