@@ -1,3 +1,4 @@
+/* colors */
 $primary-bg-color: #fff;
 $secondary-bg-color: #2f303a;
 $tertiary-bg-color: #f5f4fa;
@@ -14,5 +15,10 @@ $tertiary-border-color: rgba(255, 255, 255, 0.3);
 $icon-primary-color: #afb1b8;
 $icon-accent-color: #2196f3;
 $icon-bg-color: rgba(255, 255, 255, 0.1);
+/* fonts */
 $body-font: 'Roboto', Arial, sans-serif;
-$logo-font: Raleway, sans-serif; ;
+$logo-font: Raleway, sans-serif;
+/* breakpoints */
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;
