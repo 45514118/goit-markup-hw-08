@@ -2,6 +2,10 @@
   border-bottom: 1px solid $primary-border-color;
 }
 .header-contacts {
+  display: none;
+}
+/*
+.header-contacts {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -30,3 +34,4 @@
 .header-contacts__item:not(:first-child) {
   margin-left: 50px;
 }
+*/
