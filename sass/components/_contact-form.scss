@@ -24,6 +24,9 @@
   }
 }
 .contact-form__check-label {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
   font-size: 14px;
   line-height: 1.71;
   color: #757575;

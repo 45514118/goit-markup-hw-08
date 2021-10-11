@@ -20,7 +20,7 @@
   <body class="page">
     <!-- шапка -->
     <header class="page-header">
-      <div class="container flex">
+      <div class="container">
         <a href="/" class="logo">Web<span class="logo-black">Studio</span></a>
         <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg width="24" height="16">
@@ -109,7 +109,7 @@
                 >
                 </textarea>
               </label>
-              <label class="contact-form__check-label flex">
+              <label class="contact-form__check-label">
                 <input
                   class="contact-form__check-input visually-hidden"
                   name="confirm"
@@ -129,7 +129,7 @@
       <section class="about-us section">
         <div class="container">
           <h2 class="section__title visually-hidden">О нас</h2>
-          <ul class="about-us__list flex">
+          <ul class="about-us__list">
             <li class="about-us__item">
               <div class="about-us__group">
                 <svg class="about-us__icon" width="70" height="70">
@@ -181,7 +181,7 @@
       <section class="what-we-do section">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
-          <ul class="what-we-do__list flex">
+          <ul class="what-we-do__list">
             <li class="what-we-do__item">
               <img
                 src="./images/index/box1.jpg"
@@ -219,17 +219,43 @@
       <section class="team section">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
-          <ul class="team__list flex">
+          <ul class="team__list">
             <li class="team-card">
-              <img
-                src="./images/index/teamcard1.jpg"
-                alt="Участник команды 1"
-                class="team-card__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/index/teamcard1-450@1x.jpg 1x,
+                    ./images/index/teamcard1-450@2x.jpg 2x
+                  "
+                  type=""
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/index/teamcard1-354@1x.jpg 1x,
+                    ./images/index/teamcard1-354@2x.jpg 2x
+                  "
+                  type=""
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/index/teamcard1-270@1x.jpg 1x,
+                    ./images/index/teamcard1-270@2x.jpg 2x
+                  "
+                  type=""
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/index/teamcard1.jpg"
+                  alt="Участник команды 1"
+                  class="team-card__img"
+                />
+              </picture>
               <div class="team-card__footer">
                 <h3 class="team-card__title">Игорь Демьяненко</h3>
                 <p class="team-card__description">Product Designer</p>
-                <ul class="team-social flex">
+                <ul class="team-social">
                   <li class="team-social__item">
                     <a href="#" class="team-social__link">
                       <svg class="team-social__icon" width="20" height="20">
@@ -263,6 +289,7 @@
             </li>
             <li class="team-card">
               <img
+                srcset="./images/index/teamcard2@1x.jpg 1x, ./images/index/teamcard2@2x.jpg 2x"
                 src="./images/index/teamcard2.jpg"
                 alt="Участник команды 2"
                 width="270"
@@ -272,7 +299,7 @@
               <div class="team-card__footer">
                 <h3 class="team-card__title">Ольга Репина</h3>
                 <p class="team-card__description">Frontend Developer</p>
-                <ul class="team-social flex">
+                <ul class="team-social">
                   <li class="team-social__item">
                     <a href="#" class="team-social__link">
                       <svg class="team-social__icon" width="20" height="20">
@@ -315,7 +342,7 @@
               <div class="team-card__footer">
                 <h3 class="team-card__title">Николай Тарасов</h3>
                 <p class="team-card__description">Marketing</p>
-                <ul class="team-social flex">
+                <ul class="team-social">
                   <li class="team-social__item">
                     <a href="#" class="team-social__link">
                       <svg class="team-social__icon" width="20" height="20">
@@ -358,7 +385,7 @@
               <div class="team-card__footer">
                 <h3 class="team-card__title">Михаил Ермаков</h3>
                 <p class="team-card__description">UI Designer</p>
-                <ul class="team-social flex">
+                <ul class="team-social">
                   <li class="team-social__item">
                     <a href="#" class="team-social__link">
                       <svg class="team-social__icon" width="20" height="20">
@@ -397,44 +424,44 @@
       <section class="section partners">
         <div class="container">
           <h2 class="section__title">Постоянные клиенты</h2>
-          <ul class="partners__list flex">
+          <ul class="partners__list">
             <li class="partners__item">
-              <a href="#" class="partners__link flex">
+              <a href="#" class="partners__link">
                 <svg class="partners__logo" width="106" height="60">
                   <use href="./images/icons/icons.svg#icon-logo-one"></use>
                 </svg>
               </a>
             </li>
             <li class="partners__item">
-              <a href="#" class="partners__link flex">
+              <a href="#" class="partners__link">
                 <svg class="partners__logo" width="106" height="60">
                   <use href="./images/icons/icons.svg#icon-logo-two"></use>
                 </svg>
               </a>
             </li>
             <li class="partners__item">
-              <a href="#" class="partners__link flex">
+              <a href="#" class="partners__link">
                 <svg class="partners__logo" width="106" height="60">
                   <use href="./images/icons/icons.svg#icon-logo-three"></use>
                 </svg>
               </a>
             </li>
             <li class="partners__item">
-              <a href="#" class="partners__link flex">
+              <a href="#" class="partners__link">
                 <svg class="partners__logo" width="106" height="60">
                   <use href="./images/icons/icons.svg#icon-logo-four"></use>
                 </svg>
               </a>
             </li>
             <li class="partners__item">
-              <a href="#" class="partners__link flex">
+              <a href="#" class="partners__link">
                 <svg class="partners__logo" width="106" height="60">
                   <use href="./images/icons/icons.svg#icon-logo-five"></use>
                 </svg>
               </a>
             </li>
             <li class="partners__item">
-              <a href="#" class="partners__link flex">
+              <a href="#" class="partners__link">
                 <svg class="partners__logo" width="106" height="60">
                   <use href="./images/icons/icons.svg#icon-logo-six"></use>
                 </svg>
@@ -464,7 +491,7 @@
         </div>
         <div class="page-footer__social-group">
           <h3 class="page-footer__title">Присоединяйтесь</h3>
-          <ul class="footer-social flex">
+          <ul class="footer-social">
             <li class="footer-social__item">
               <a href="#" class="footer-social__link">
                 <svg class="footer-social__icon" width="20" height="20">
@@ -497,7 +524,7 @@
         </div>
         <div class="page-footer__subcription">
           <h3 class="page-footer__title">Подпишитесь на рассылку</h3>
-          <form class="footer-form flex">
+          <form class="footer-form">
             <input
               class="footer-form__input"
               type="email"

@@ -1,7 +1,11 @@
 .what-we-do {
   display: none;
 }
-
+.what-we-do__list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
 /* .what-we-do__item {
   margin-right: 30px;
   position: relative;
