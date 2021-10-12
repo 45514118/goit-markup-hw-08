@@ -8,9 +8,8 @@
   align-items: center;
 }
 .nav-menu__item {
-  margin-left: 50px;
-  &:first-child {
-    margin-left: 0;
+  &:not(:first-child) {
+    margin-left: 50px;
   }
 }
 .nav-menu__link {

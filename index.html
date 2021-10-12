@@ -27,6 +27,45 @@
             <use href="./images/icons/icons.svg#icon-menu"></use>
           </svg>
         </button>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-toggle js-close-menu">
+            <svg width="19" height="19">
+              <use href="./images/icons/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <ul class="mobile-menu">
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link mobile-menu__link--current">Студия</a>
+            </li>
+            <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Портфолио</a></li>
+            <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Контакты</a></li>
+          </ul>
+          <div class="mobile-contacts">
+            <a href="tel:+380961111111" class="mobile-contacts__link mobile-contacts__link--tel"
+              >+380961111111</a
+            >
+            <a
+              href="mailto:info@devstudio.com"
+              class="mobile-contacts__link mobile-contacts__link--mail"
+              >info@devstudio.com</a
+            >
+          </div>
+          <ul class="mobile-social">
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Instagram</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Twitter</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Facebook</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Linkedin</a>
+            </li>
+          </ul>
+        </div>
         <!-- навигация -->
         <nav class="nav-menu">
           <ul class="nav-menu__list">
@@ -288,14 +327,37 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                srcset="./images/index/teamcard2@1x.jpg 1x, ./images/index/teamcard2@2x.jpg 2x"
-                src="./images/index/teamcard2.jpg"
-                alt="Участник команды 2"
-                width="270"
-                height="260"
-                class="team-card__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/index/teamcard2-450@1x.jpg 1x,
+                    ./images/index/teamcard2-450@2x.jpg 2x
+                  "
+                  type=""
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/index/teamcard2-354@1x.jpg 1x,
+                    ./images/index/teamcard2-354@2x.jpg 2x
+                  "
+                  type=""
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/index/teamcard2-270@1x.jpg 1x,
+                    ./images/index/teamcard2-270@2x.jpg 2x
+                  "
+                  type=""
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/index/teamcard2.jpg"
+                  alt="Участник команды 2"
+                  class="team-card__img"
+                />
+              </picture>
               <div class="team-card__footer">
                 <h3 class="team-card__title">Ольга Репина</h3>
                 <p class="team-card__description">Frontend Developer</p>
@@ -332,13 +394,37 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                src="./images/index/teamcard3.jpg"
-                alt="Участник команды 3"
-                width="270"
-                height="260"
-                class="team-card__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/index/teamcard3-450@1x.jpg 1x,
+                    ./images/index/teamcard3-450@2x.jpg 2x
+                  "
+                  type=""
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/index/teamcard3-354@1x.jpg 1x,
+                    ./images/index/teamcard3-354@2x.jpg 2x
+                  "
+                  type=""
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/index/teamcard3-270@1x.jpg 1x,
+                    ./images/index/teamcard3-270@2x.jpg 2x
+                  "
+                  type=""
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/index/teamcard3.jpg"
+                  alt="Участник команды 3"
+                  class="team-card__img"
+                />
+              </picture>
               <div class="team-card__footer">
                 <h3 class="team-card__title">Николай Тарасов</h3>
                 <p class="team-card__description">Marketing</p>
@@ -375,13 +461,37 @@
               </div>
             </li>
             <li class="team-card">
-              <img
-                src="./images/index/teamcard4.jpg"
-                alt="Участник команды 4"
-                width="270"
-                height="260"
-                class="team-card__img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/index/teamcard4-450@1x.jpg 1x,
+                    ./images/index/teamcard4-450@2x.jpg 2x
+                  "
+                  type=""
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/index/teamcard4-354@1x.jpg 1x,
+                    ./images/index/teamcard4-354@2x.jpg 2x
+                  "
+                  type=""
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/index/teamcard4-270@1x.jpg 1x,
+                    ./images/index/teamcard4-270@2x.jpg 2x
+                  "
+                  type=""
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  src="./images/index/teamcard4.jpg"
+                  alt="Участник команды 4"
+                  class="team-card__img"
+                />
+              </picture>
               <div class="team-card__footer">
                 <h3 class="team-card__title">Михаил Ермаков</h3>
                 <p class="team-card__description">UI Designer</p>
@@ -541,6 +651,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

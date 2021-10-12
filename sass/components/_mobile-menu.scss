@@ -11,9 +11,123 @@
   border: none;
   border-radius: 50%;
   outline: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: $icon-accent-color;
+  }
   @media (min-width: $tablet) {
     & {
       display: none;
     }
+  }
+}
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: $primary-white-color;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  &:hover,
+  &:focus {
+    fill: $icon-accent-color;
+  }
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.mobile-menu__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-menu .mobile-menu__link {
+  display: block;
+  color: $primary-black-color;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
+  &:hover,
+  &:focus {
+    color: $icon-accent-color;
+  }
+}
+.mobile-menu__link--current.mobile-menu__link {
+  color: $icon-accent-color;
+}
+.mobile-contacts {
+  margin-top: auto;
+  margin-bottom: 64px;
+}
+.mobile-contacts__link {
+  display: block;
+  text-decoration: none;
+  &--tel {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    color: $icon-accent-color;
+    margin-bottom: 32px;
+  }
+  &--mail {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: $secondary-text-color;
+  }
+}
+.mobile-social {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.mobile-social__item {
+  padding-left: 10px;
+  padding-right: 10px;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+.mobile-social__link {
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: $icon-accent-color;
+  @media screen and (max-width: 440px) {
+    font-size: 3.5vw;
   }
 }
