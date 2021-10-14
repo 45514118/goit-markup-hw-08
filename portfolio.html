@@ -20,18 +20,60 @@
   <body>
     <!-- шапка -->
     <header class="page-header">
-      <div class="container flex">
+      <div class="container">
         <a href="/" class="logo">Web<span class="logo-black">Studio</span></a>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="24" height="16">
+            <use href="./images/icons/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-toggle js-close-menu">
+            <svg width="19" height="19">
+              <use href="./images/icons/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <ul class="mobile-menu">
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link mobile-menu__link--current">Студия</a>
+            </li>
+            <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Портфолио</a></li>
+            <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Контакты</a></li>
+          </ul>
+          <div class="mobile-contacts">
+            <a href="tel:+380961111111" class="mobile-contacts__link mobile-contacts__link--tel"
+              >+380961111111</a
+            >
+            <a
+              href="mailto:info@devstudio.com"
+              class="mobile-contacts__link mobile-contacts__link--mail"
+              >info@devstudio.com</a
+            >
+          </div>
+          <ul class="mobile-social">
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Instagram</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Twitter</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Facebook</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link">Linkedin</a>
+            </li>
+          </ul>
+        </div>
         <!-- навигация -->
         <nav class="nav-menu">
           <ul class="nav-menu__list">
             <li class="nav-menu__item">
-              <a href="./index.html" class="nav-menu__link">Студия</a>
+              <a href="./index.html" class="nav-menu__link nav-menu__link--current">Студия</a>
             </li>
             <li class="nav-menu__item">
-              <a href="./portfolio.html" class="nav-menu__link nav-menu__link--current"
-                >Портфолио</a
-              >
+              <a href="./portfolio.html" class="nav-menu__link">Портфолио</a>
             </li>
             <li class="nav-menu__item">
               <a href="#" class="nav-menu__link">Контакты</a>
@@ -88,13 +130,37 @@
             <li class="portfolio-card">
               <a href="#" class="portfolio-card__link">
                 <div class="portfolio-card__picture">
-                  <img
-                    src="./images/portfolio/pf1.jpg"
-                    alt="Сайт на экране ноутбука"
-                    class="portfolio-card__img"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf1-450@1x.jpg 1x,
+                        ./images/portfolio/pf1-450@2x.jpg 2x
+                      "
+                      type=""
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf1-354@1x.jpg 1x,
+                        ./images/portfolio/pf1-354@2x.jpg 2x
+                      "
+                      type=""
+                      media="(max-width: 1199px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf1-370@1x.jpg 1x,
+                        ./images/portfolio/pf1-370@2x.jpg 2x
+                      "
+                      type=""
+                      media="(min-width: 1200px)"
+                    />
+                    <img
+                      src="./images/portfolio/pf1.jpg"
+                      alt="Сайт на экране ноутбука"
+                      class="portfolio-card__img"
+                    />
+                  </picture>
                   <p class="portfolio-card__text">
                     Технокряк это современная площадка распространения коронавируса. Компании
                     используют эту платформу для цифрового шпионажа и атак на защищённые сервера
@@ -114,8 +180,6 @@
                     src="./images/portfolio/pf2.jpg"
                     alt="Яркий постер с баскетболистами"
                     class="portfolio-card__img"
-                    width="370"
-                    height="294"
                   />
                   <p class="portfolio-card__text">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vel aut tempora,
@@ -136,8 +200,6 @@
                     src="./images/portfolio/pf3.jpg"
                     alt="Логотип рыбного ресторана"
                     class="portfolio-card__img"
-                    width="370"
-                    height="294"
                   />
                   <p class="portfolio-card__text">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vel aut tempora,
@@ -158,8 +220,6 @@
                     src="./images/portfolio/pf4.jpg"
                     alt="Наушники"
                     class="portfolio-card__img"
-                    width="370"
-                    height="294"
                   />
                   <p class="portfolio-card__text">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vel aut tempora,
@@ -180,8 +240,6 @@
                     src="./images/portfolio/pf5.jpg"
                     alt="Картонные коробки разных размеров"
                     class="portfolio-card__img"
-                    width="370"
-                    height="294"
                   />
                   <p class="portfolio-card__text">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vel aut tempora,
@@ -202,8 +260,6 @@
                     src="./images/portfolio/pf6.jpg"
                     alt="Сайт на экране монитора"
                     class="portfolio-card__img"
-                    width="370"
-                    height="294"
                   />
                   <p class="portfolio-card__text">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vel aut tempora,
@@ -224,8 +280,6 @@
                     src="./images/portfolio/pf7.jpg"
                     alt="Журнал со статьей и фотографиями"
                     class="portfolio-card__img"
-                    width="370"
-                    height="294"
                   />
                   <p class="portfolio-card__text">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vel aut tempora,
@@ -246,8 +300,6 @@
                     src="./images/portfolio/pf8.jpg"
                     alt="Ярлык с веревочкой"
                     class="portfolio-card__img"
-                    width="370"
-                    height="294"
                   />
                   <p class="portfolio-card__text">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vel aut tempora,
@@ -268,8 +320,6 @@
                     src="./images/portfolio/pf9.jpg"
                     alt="Пальцы на клавиатуре ноутбука"
                     class="portfolio-card__img"
-                    width="370"
-                    height="294"
                   />
                   <p class="portfolio-card__text">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit vel aut tempora,
@@ -307,7 +357,7 @@
         </div>
         <div class="page-footer__social-group">
           <h3 class="page-footer__title">Присоединяйтесь</h3>
-          <ul class="footer-social flex">
+          <ul class="footer-social">
             <li class="footer-social__item">
               <a href="#" class="footer-social__link">
                 <svg class="footer-social__icon" width="20" height="20">
@@ -340,7 +390,7 @@
         </div>
         <div class="page-footer__subcription">
           <h3 class="page-footer__title">Подпишитесь на рассылку</h3>
-          <form class="footer-form flex">
+          <form class="footer-form">
             <input
               class="footer-form__input"
               type="email"
@@ -357,5 +407,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
