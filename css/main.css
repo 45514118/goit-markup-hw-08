@@ -587,8 +587,6 @@ textarea {
   left: 50%;
   width: 100%;
   max-width: 528px;
-  height: 100%;
-  max-height: 528px;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   padding: 20px;
@@ -597,6 +595,12 @@ textarea {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 480px) {
+  .promo-modal {
+    padding: 40px;
+  }
 }
 
 .promo-modal__close-button {
@@ -815,6 +819,12 @@ textarea {
   margin-top: 4px;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 480px) {
+  .textarea-input {
+    min-height: 120px;
+  }
 }
 
 .about-us__list {
