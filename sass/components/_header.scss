@@ -4,18 +4,24 @@
 .page-header .container {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: flex-start;
   align-items: center;
 }
 .header-contacts {
   display: none;
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: auto;
+  }
 }
-/*
-.header-contacts {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  margin-left: auto;
-}
+
 .header-contacts__link {
   display: flex;
   flex-wrap: nowrap;
@@ -38,5 +44,8 @@
 }
 .header-contacts__item:not(:first-child) {
   margin-left: 50px;
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
-*/

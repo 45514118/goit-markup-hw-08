@@ -1,14 +1,24 @@
 .about-us__list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @media screen and (min-width: $tablet) {
+    margin: -15px;
+  }
 }
 .about-us__item {
   margin-bottom: 30px;
   width: 100%;
-  &__item:last-child {
+  &:last-child {
     margin-bottom: 0;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    flex-basis: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 8 * 15px) / 4);
+    margin: 15px;
   }
 }
 .about-us__group {
@@ -27,6 +37,9 @@
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 10px;
+  @media screen and (min-width: $tablet) {
+    text-align: left;
+  }
 }
 .about-us__description {
   font-size: 14px;

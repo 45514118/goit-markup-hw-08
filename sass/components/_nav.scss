@@ -1,5 +1,10 @@
 .nav-menu {
   display: none;
+  @media (min-width: $tablet) {
+    & {
+      display: flex;
+    }
+  }
 }
 
 .nav-menu__list {

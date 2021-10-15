@@ -3,14 +3,17 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
 }
 .partners__item {
   margin: 15px;
   height: 92px;
   flex-basis: calc((100% - 2 * 30px) / 2);
-  /* &:last-child {
-    margin-right: 0;
-  } */
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
 }
 .partners__link {
   display: flex;

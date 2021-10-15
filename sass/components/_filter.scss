@@ -3,6 +3,9 @@
   flex-wrap: wrap;
   margin-bottom: 50px;
   justify-content: flex-start;
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+  }
 }
 .filter-buttons__item {
   margin-right: 8px;
