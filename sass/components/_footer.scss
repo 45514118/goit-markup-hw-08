@@ -6,11 +6,9 @@
 .page-footer .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
     flex-flow: row wrap;
-    flex: 1 1 auto;
     align-items: baseline;
   }
   @media screen and (min-width: $desktop) {
@@ -30,14 +28,17 @@
 }
 .page-footer__address {
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
-    margin-left: 82px;
+    width: 232px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .page-footer__social-group {
   margin-top: 60px;
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
-    margin-left: 165px;
-    margin-top: 0;
+    width: 205px;
+    margin-left: auto;
+    margin-right: auto;
   }
   @media screen and (min-width: $desktop) {
     margin-left: 70px;
@@ -46,9 +47,9 @@
 }
 .page-footer__subcription {
   margin-top: 60px;
-  min-width: 450px;
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
     margin-right: auto;
+    width: 450px;
     margin-left: auto;
   }
   @media screen and (min-width: $desktop) {
@@ -62,7 +63,7 @@
 .footer-social {
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
+  justify-content: center;
 }
 .footer-social__link {
   display: flex;
@@ -104,6 +105,8 @@
     margin-bottom: 0;
     margin-right: 12px;
   }
+  @media screen and (min-width: $tablet) {
+  }
 }
 .footer-form__submit {
   font-weight: 700;
@@ -113,7 +116,7 @@
   align-items: center;
   letter-spacing: 0.06em;
   color: $primary-white-color;
-  min-width: 200px;
+  width: 200px;
   height: 50px;
   background: $icon-accent-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
